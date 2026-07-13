@@ -1,211 +1,70 @@
 <!doctype html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="An original interactive student timeline showing the history and evolution of artificial intelligence.">
-
-<title>Signals & Symbols | AI History</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Professional portfolio of Sai Tejaswi Nooka, a data engineer focused on scalable pipelines, analytics systems, and responsible machine learning.">
+<title>Sai Tejaswi Nooka | Data Engineering Portfolio</title>
 <style>
-:root{--bg:#04110d;--grid:#0f3e2c;--green:#72ff9a;--lime:#caff70;--text:#eaffef;--muted:#a4c9b0;--panel:#081c14;--orange:#ffb55e}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background-color:var(--bg);background-image:linear-gradient(rgba(30,112,76,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(30,112,76,.16) 1px,transparent 1px);background-size:32px 32px;color:var(--text);font-family:"Courier New",monospace;line-height:1.6}
-a{color:var(--lime)}.boot{min-height:86vh;display:grid;place-items:center;padding:3rem 1rem;position:relative;overflow:hidden}.boot:before,.boot:after{content:"";position:absolute;width:420px;height:420px;border:1px solid var(--green);border-radius:50%;opacity:.12;animation:pulse 4s infinite}.boot:after{animation-delay:2s;width:680px;height:680px}
-@keyframes pulse{50%{transform:scale(1.08);opacity:.03}}.terminal{width:min(980px,100%);border:1px solid var(--green);background:rgba(3,15,10,.9);box-shadow:0 0 60px rgba(65,255,126,.15);position:relative;z-index:1}
-.bar{display:flex;gap:.45rem;padding:.7rem;border-bottom:1px solid var(--green)}.dot{width:.7rem;height:.7rem;border-radius:50%;background:var(--green)}.terminal-body{padding:clamp(1.4rem,5vw,4rem)}.prompt{color:var(--green)}h1{font-size:clamp(2.5rem,8vw,6.5rem);line-height:.95;letter-spacing:-.06em;margin:.8rem 0;text-shadow:0 0 18px rgba(114,255,154,.45)}.type{color:var(--lime);border-right:2px solid;white-space:nowrap;overflow:hidden;width:0;animation:type 3s steps(27,end) .3s forwards,blink .8s infinite}@keyframes type{to{width:27ch}}@keyframes blink{50%{border-color:transparent}}
-.lead{max-width:760px;color:var(--muted)}.command{display:inline-block;margin-top:1rem;padding:.65rem .9rem;border:1px solid var(--green);text-decoration:none}.command:hover{background:var(--green);color:#031008}
-.board{width:min(1180px,calc(100% - 2rem));margin:3rem auto 7rem;display:grid;grid-template-columns:repeat(3,1fr);gap:2.4rem;position:relative}.board:before{content:"";position:absolute;inset:2rem;background:repeating-linear-gradient(90deg,transparent 0 86px,rgba(114,255,154,.17) 87px 89px,transparent 90px 120px);z-index:-1}
-.chip{min-height:220px;text-align:left;color:var(--text);font:inherit;background:linear-gradient(145deg,#0a241a,#06150f);border:1px solid #2b8054;padding:1.5rem;position:relative;cursor:pointer;box-shadow:inset 0 0 0 5px #05130d,0 12px 30px rgba(0,0,0,.35);opacity:0;transform:translateY(25px);animation:load .65s forwards;animation-delay:var(--delay)}@keyframes load{to{opacity:1;transform:none}}.chip:hover,.chip:focus{outline:none;border-color:var(--lime);box-shadow:inset 0 0 0 5px #05130d,0 0 30px rgba(114,255,154,.25);transform:translateY(-5px)}
-.chip small{color:var(--green);display:block;margin-bottom:.8rem}.chip strong{display:block;font-size:1.25rem;line-height:1.25;max-width:82%}.signal{position:absolute;right:1rem;bottom:.7rem;font-size:3rem;color:var(--orange);opacity:.7}.pin{position:absolute;top:18%;bottom:18%;width:12px;background:repeating-linear-gradient(#8bbda0 0 10px,transparent 10px 24px)}.pin.left{left:-13px}.pin.right{right:-13px}
-.dialog{border:1px solid var(--green);background:#06130e;color:var(--text);width:min(760px,calc(100% - 2rem));padding:0;box-shadow:0 0 100px #000}.dialog::backdrop{background:rgba(0,5,3,.82);backdrop-filter:blur(6px)}.dialog-inner{padding:clamp(1.3rem,4vw,2.6rem)}.dialog .close{float:right;border:1px solid var(--green);background:transparent;color:var(--green);font:inherit;padding:.35rem .55rem;cursor:pointer}.dialog .year{color:var(--lime);font-size:1rem}.dialog h2{font-size:clamp(1.8rem,5vw,3rem);line-height:1.05;margin:.5rem 0}.dialog p{color:var(--muted)}.readout{border-left:3px solid var(--orange);padding-left:1rem;margin-top:1.3rem;color:#ffe2bc}
-.sources{padding:6rem max(1rem,calc((100vw - 1080px)/2));background:#020b07;border-top:1px solid var(--grid)}.eyebrow{color:var(--green);text-transform:uppercase;letter-spacing:.15em}.sources h2{font-size:clamp(2rem,5vw,4rem)}.source-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.source-grid article,.disclosure{border:1px solid #205d3e;background:#06130e;padding:1.3rem}.sources li{margin:.8rem 0;color:var(--muted)}.disclosure{margin-top:1rem;border-left:5px solid var(--orange)}footer{text-align:center;padding:2rem;color:var(--muted)}
-@media(max-width:900px){.board{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.board,.source-grid{grid-template-columns:1fr}.type{white-space:normal;width:auto;animation:none;border:0}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.chip{opacity:1;transform:none}}
+:root{
+  --paper:#f6f1e8;--ink:#161a1d;--muted:#5f666b;--red:#d44a3a;--blue:#246a8d;
+  --yellow:#f2c14e;--line:#c9c2b7;--card:#fffdf8;--shadow:rgba(22,26,29,.12)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit}.skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.7rem;z-index:100}
+.site-head{position:sticky;top:0;z-index:20;background:rgba(246,241,232,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{width:min(1180px,calc(100% - 2rem));margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;gap:1rem}
+.brand{font-weight:900;text-decoration:none;letter-spacing:-.03em}.brand span{color:var(--red)}
+.nav-links{display:flex;flex-wrap:wrap;gap:.9rem}.nav-links a{text-decoration:none;font-size:.92rem;color:var(--muted)}.nav-links a:hover{color:var(--ink)}
+.hero{width:min(1180px,calc(100% - 2rem));margin:0 auto;padding:5rem 0 3.5rem;display:grid;grid-template-columns:1.25fr .75fr;gap:3rem;align-items:end}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:800;color:var(--blue)}
+h1{font-family:Georgia,serif;font-size:clamp(3.2rem,8vw,7.4rem);line-height:.88;letter-spacing:-.065em;margin:.7rem 0 1.5rem;max-width:900px}
+.hero-lead{font-size:clamp(1.05rem,2vw,1.35rem);max-width:760px;color:var(--muted)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.05rem;border:1px solid var(--ink);text-decoration:none;font-weight:800;background:var(--ink);color:#fff}.btn.alt{background:transparent;color:var(--ink)}.btn:hover{transform:translateY(-2px)}
+.identity-card{background:var(--card);border:1px solid var(--ink);padding:1.5rem;box-shadow:14px 14px 0 var(--yellow);transform:rotate(1.2deg)}
+.monogram{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:white;font-family:Georgia,serif;font-size:2.3rem;font-weight:800;margin-bottom:1.2rem}
+.identity-card h2{margin:.2rem 0;font-size:1.35rem}.identity-card p{margin:.35rem 0;color:var(--muted)}
+.ticker{border-block:1px solid var(--ink);overflow:hidden;background:var(--yellow)}.ticker-inner{display:flex;gap:2.5rem;white-space:nowrap;padding:.75rem 0;font-weight:900;text-transform:uppercase;letter-spacing:.08em;animation:move 22s linear infinite}.ticker-inner span:before{content:'◆';margin-right:2.5rem;color:var(--red)}@keyframes move{to{transform:translateX(-50%)}}
+.section{width:min(1180px,calc(100% - 2rem));margin:auto;padding:5rem 0}.section-head{display:grid;grid-template-columns:.7fr 1.3fr;gap:2rem;border-top:2px solid var(--ink);padding-top:1.2rem;margin-bottom:2.2rem}.section-head h2{font-family:Georgia,serif;font-size:clamp(2rem,5vw,4.5rem);line-height:1;margin:0}.section-head p{margin:0;color:var(--muted);max-width:700px}
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.value{background:var(--card);border:1px solid var(--line);padding:1.35rem;min-height:200px}.value .num{font-family:Georgia,serif;font-size:3rem;color:var(--red);line-height:1}.value h3{margin:.7rem 0}.value p{color:var(--muted);margin:0}
+.artifacts{display:grid;grid-template-columns:1.1fr .9fr;gap:1.2rem}.artifact{position:relative;overflow:hidden;border:1px solid var(--ink);background:var(--card);min-height:430px;display:flex;flex-direction:column}.artifact-body{padding:1.6rem;position:relative;z-index:2}.artifact h3{font-family:Georgia,serif;font-size:2.1rem;line-height:1.05;margin:.3rem 0}.artifact p{color:var(--muted)}.artifact-links{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1rem}.mini-link{display:inline-block;padding:.55rem .75rem;border:1px solid var(--ink);text-decoration:none;font-weight:800;background:#fff}.mini-link:hover{background:var(--ink);color:#fff}
+.artifact-visual{margin-top:auto;min-height:180px;position:relative;overflow:hidden}.terminal-visual{background:#06130e;color:#72ff9a;padding:1.2rem;font-family:"Courier New",monospace}.terminal-visual .chips{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-top:1rem}.terminal-visual i{display:block;height:42px;border:1px solid #72ff9a;background:#0a241a}.path-visual{background:linear-gradient(135deg,#e9f3f7,#fff);padding:1.2rem}.pathline{display:grid;grid-template-columns:repeat(4,1fr);gap:.55rem}.pathline b{border:2px solid var(--blue);min-height:90px;display:grid;place-items:center;font-family:Georgia,serif;font-size:2.3rem;color:var(--blue);background:white}.pathline b:nth-child(2){transform:translateY(18px)}.pathline b:nth-child(3){transform:translateY(-9px)}
+.experience{display:grid;grid-template-columns:280px 1fr;border-top:1px solid var(--line)}.experience-row{display:contents}.experience-row>*{padding:1.2rem 0;border-bottom:1px solid var(--line)}.experience .date{color:var(--blue);font-weight:800;padding-right:1rem}.experience h3{margin:0 0 .25rem}.experience p{margin:.15rem 0;color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:.65rem}.skill{background:#fff;border:1px solid var(--ink);padding:.55rem .75rem;font-weight:800;box-shadow:4px 4px 0 var(--red)}
+.contact-card{background:var(--ink);color:white;padding:clamp(2rem,5vw,4rem);display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}.contact-card h2{font-family:Georgia,serif;font-size:clamp(2rem,5vw,4rem);line-height:1;margin:.3rem 0}.contact-card p{color:#d7d7d7;max-width:700px}.contact-card .btn{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+footer{width:min(1180px,calc(100% - 2rem));margin:auto;padding:2rem 0;color:var(--muted);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(24px);transition:.7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){.hero,.section-head,.artifacts,.contact-card{grid-template-columns:1fr}.identity-card{transform:none}.value-grid{grid-template-columns:1fr}.experience{grid-template-columns:1fr}.experience-row{display:block;border-bottom:1px solid var(--line)}.experience-row>*{border:0;padding:.35rem 0}.nav-links{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<header class="boot"><div class="terminal"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><div class="terminal-body"><span class="prompt">student@ai-history:~$</span><h1>Signals &amp; Symbols</h1><p class="type">loading intelligence timeline...</p><p class="lead">This interface treats each milestone like a component on a circuit board. Select a chip to inspect the idea, person, organization, and historical effect behind it.</p><a class="command" href="#board">run timeline.exe</a></div></div></header>
-<main class="board" id="board">
-    <button class="chip" data-index="0" style="--delay:0ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>1950 · Foundations</small>
-      <strong>Turing Asks, “Can Machines Think?”</strong>
-      <span class="signal">◇</span>
-    </button>
-
-    <button class="chip" data-index="1" style="--delay:45ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>1956 · Foundations</small>
-      <strong>Artificial Intelligence Becomes a Field</strong>
-      <span class="signal">✦</span>
-    </button>
-
-    <button class="chip" data-index="2" style="--delay:90ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>1958 · Early Learning</small>
-      <strong>The Perceptron Learns Patterns</strong>
-      <span class="signal">◎</span>
-    </button>
-
-    <button class="chip" data-index="3" style="--delay:135ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>1966 · Symbolic AI</small>
-      <strong>ELIZA Simulates Conversation</strong>
-      <span class="signal">⌁</span>
-    </button>
-
-    <button class="chip" data-index="4" style="--delay:180ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>1969 · Robotics</small>
-      <strong>Shakey Connects Reasoning and Action</strong>
-      <span class="signal">▣</span>
-    </button>
-
-    <button class="chip" data-index="5" style="--delay:225ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>1972 · Expert Systems</small>
-      <strong>MYCIN Applies Expert Knowledge</strong>
-      <span class="signal">✚</span>
-    </button>
-
-    <button class="chip" data-index="6" style="--delay:270ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>1974–1980 · AI Winter</small>
-      <strong>The First AI Winter</strong>
-      <span class="signal">❄</span>
-    </button>
-
-    <button class="chip" data-index="7" style="--delay:315ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>1980–1986 · Expert Systems</small>
-      <strong>Expert Systems Enter Business</strong>
-      <span class="signal">⚙</span>
-    </button>
-
-    <button class="chip" data-index="8" style="--delay:360ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>1987–1993 · AI Winter</small>
-      <strong>The Second AI Winter</strong>
-      <span class="signal">❄</span>
-    </button>
-
-    <button class="chip" data-index="9" style="--delay:405ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>1997 · Machine Victory</small>
-      <strong>Deep Blue Defeats Kasparov</strong>
-      <span class="signal">♞</span>
-    </button>
-
-    <button class="chip" data-index="10" style="--delay:450ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>2006 · Deep Learning</small>
-      <strong>Deep Learning Returns</strong>
-      <span class="signal">⬡</span>
-    </button>
-
-    <button class="chip" data-index="11" style="--delay:495ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>2009 · Data</small>
-      <strong>ImageNet Creates a Data Foundation</strong>
-      <span class="signal">▦</span>
-    </button>
-
-    <button class="chip" data-index="12" style="--delay:540ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>2011 · Language</small>
-      <strong>Watson Wins Jeopardy!</strong>
-      <span class="signal">?</span>
-    </button>
-
-    <button class="chip" data-index="13" style="--delay:585ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>2012 · Deep Learning</small>
-      <strong>AlexNet Changes Computer Vision</strong>
-      <span class="signal">◉</span>
-    </button>
-
-    <button class="chip" data-index="14" style="--delay:630ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>2014 · Generative AI</small>
-      <strong>GANs Learn to Generate</strong>
-      <span class="signal">∞</span>
-    </button>
-
-    <button class="chip" data-index="15" style="--delay:675ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>2015 · Cloud AI</small>
-      <strong>Cloud Platforms Expand AI Access</strong>
-      <span class="signal">☁</span>
-    </button>
-
-    <button class="chip" data-index="16" style="--delay:720ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>2016 · Reinforcement Learning</small>
-      <strong>AlphaGo Defeats Lee Sedol</strong>
-      <span class="signal">●</span>
-    </button>
-
-    <button class="chip" data-index="17" style="--delay:765ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>2017 · Transformers</small>
-      <strong>Attention Is All You Need</strong>
-      <span class="signal">↯</span>
-    </button>
-
-    <button class="chip" data-index="18" style="--delay:810ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>2020 · Large Language Models</small>
-      <strong>GPT-3 Demonstrates Scale</strong>
-      <span class="signal">▤</span>
-    </button>
-
-    <button class="chip" data-index="19" style="--delay:855ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>2022 · Generative AI</small>
-      <strong>ChatGPT Brings AI to the Public</strong>
-      <span class="signal">✧</span>
-    </button>
-
-    <button class="chip" data-index="20" style="--delay:900ms">
-      <span class="pin left"></span><span class="pin right"></span>
-      <small>2023–Present · Multimodal AI</small>
-      <strong>Models Become Multimodal</strong>
-      <span class="signal">◈</span>
-    </button></main>
-<dialog class="dialog" id="dialog"><div class="dialog-inner"><button class="close" aria-label="Close">×</button><div id="detail"></div></div></dialog>
-
-<section class="sources" id="sources">
-  <p class="eyebrow">Research trail</p>
-  <h2>Sources and AI Assistance</h2>
-  <div class="source-grid">
-    <article>
-      <h3>Assigned resources</h3>
-      <ol>
-        <li>Putchuon – “Put You On.” (2024, May 30). <em>The entire history of artificial intelligence (Last 100 years)</em> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=mSd9nmPM7Vg" target="_blank" rel="noopener">View source</a></li>
-        <li>IEEE Computer Society. (2025, March 11). <em>The evolution of AI: From foundations to future prospects.</em> <a href="https://www.computer.org/publications/tech-news/research/evolution-of-ai" target="_blank" rel="noopener">View source</a></li>
-        <li>Roser, M. (2022). <em>The brief history of artificial intelligence: The world has changed fast—what might be next?</em> Our World in Data. <a href="https://ourworldindata.org/brief-history-of-ai" target="_blank" rel="noopener">View source</a></li>
-      </ol>
-    </article>
-    <article>
-      <h3>Milestone references</h3>
-      <ol>
-        <li>Dartmouth College. (n.d.). <em>Artificial intelligence coined at Dartmouth.</em> <a href="https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth" target="_blank" rel="noopener">View source</a></li>
-        <li>IBM. (n.d.). <em>Deep Blue.</em> <a href="https://www.ibm.com/history/deep-blue" target="_blank" rel="noopener">View source</a></li>
-        <li>Krizhevsky, A., Sutskever, I., &amp; Hinton, G. E. (2012). <em>ImageNet classification with deep convolutional neural networks.</em> <a href="https://proceedings.neurips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf" target="_blank" rel="noopener">View paper</a></li>
-        <li>Vaswani, A., et al. (2017). <em>Attention is all you need.</em> <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">View paper</a></li>
-        <li>Google DeepMind. (n.d.). <em>AlphaGo.</em> <a href="https://deepmind.google/research/alphago/" target="_blank" rel="noopener">View source</a></li>
-      </ol>
-    </article>
-  </div>
-  <aside class="disclosure">
-    <strong>AI assistance disclosure:</strong> I used ChatGPT to help organize the historical milestones, improve short descriptions, and troubleshoot the HTML, CSS, and JavaScript. I reviewed the dates against the sources above, selected the final content, and customized the design and presentation.
-  </aside>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><nav class="nav"><a class="brand" href="index.html">Sai Tejaswi <span>Nooka</span></a><div class="nav-links"><a href="#about">About</a><a href="#artifacts">Artifacts</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="resume.html">Resume</a><a href="#contact">Contact</a></div></nav></header>
+<main id="main">
+<section class="hero">
+  <div class="reveal"><p class="eyebrow">Data Engineering · Analytics · Responsible ML</p><h1>Building reliable data paths from raw inputs to useful decisions.</h1><p class="hero-lead">I am Sai Tejaswi Nooka, a data engineer who designs data pipelines, transforms complex information, and supports analytics systems. My portfolio connects production data work with continued growth in machine learning and human-centered AI.</p><div class="hero-actions"><a class="btn" href="#artifacts">Explore artifacts →</a><a class="btn alt" href="Sai_Tejaswi_Nooka_Resume.docx">Download résumé</a></div></div>
+  <aside class="identity-card reveal"><div class="monogram">ST</div><p class="eyebrow">Professional focus</p><h2>Data Engineer</h2><p>SQL · Snowflake · Python · ETL/ELT · Qlik Sense · GCP</p><hr><p><a href="mailto:tejaswi.rn@gmail.com">tejaswi.rn@gmail.com</a></p><p><a href="tel:+19402998195">940-299-8195</a></p></aside>
 </section>
-
-<footer>&lt;/timeline&gt; — original student web project</footer>
-<script>
-const data=[{"year": "1950", "era": "Foundations", "icon": "\u25c7", "title": "Turing Asks, \u201cCan Machines Think?\u201d", "description": "Alan Turing published \u201cComputing Machinery and Intelligence\u201d and introduced the imitation game, later called the Turing Test. The paper gave researchers a practical way to discuss machine intelligence.", "people": "Alan Turing", "impact": "Created an early framework for evaluating intelligent behavior."}, {"year": "1956", "era": "Foundations", "icon": "\u2726", "title": "Artificial Intelligence Becomes a Field", "description": "John McCarthy, Marvin Minsky, Claude Shannon, and Nathaniel Rochester organized the Dartmouth Summer Research Project. The proposal helped establish the term \u201cartificial intelligence.\u201d", "people": "McCarthy \u00b7 Minsky \u00b7 Shannon \u00b7 Rochester", "impact": "Brought researchers together around a shared field of study."}, {"year": "1958", "era": "Early Learning", "icon": "\u25ce", "title": "The Perceptron Learns Patterns", "description": "Frank Rosenblatt demonstrated the perceptron, an early trainable neural-network model. It showed that a machine could adjust internal weights from examples.", "people": "Frank Rosenblatt", "impact": "Introduced a foundation for later neural-network learning."}, {"year": "1966", "era": "Symbolic AI", "icon": "\u2301", "title": "ELIZA Simulates Conversation", "description": "Joseph Weizenbaum created ELIZA, a program that matched text patterns to imitate a psychotherapist. Its simple rules still convinced some users that the computer understood them.", "people": "Joseph Weizenbaum \u00b7 MIT", "impact": "Raised early questions about language, trust, and human attachment to machines."}, {"year": "1969", "era": "Robotics", "icon": "\u25a3", "title": "Shakey Connects Reasoning and Action", "description": "SRI\u2019s Shakey robot combined perception, planning, and movement. It was an important step toward robots that could reason about their surroundings.", "people": "SRI International", "impact": "Linked symbolic planning with real-world robotic behavior."}, {"year": "1972", "era": "Expert Systems", "icon": "\u271a", "title": "MYCIN Applies Expert Knowledge", "description": "Researchers at Stanford developed MYCIN to recommend antibiotics for bacterial infections. It used hand-written rules and demonstrated the value of specialized, narrow AI.", "people": "Stanford University", "impact": "Showed how expert systems could support decisions in a focused domain."}, {"year": "1974\u20131980", "era": "AI Winter", "icon": "\u2744", "title": "The First AI Winter", "description": "Early promises exceeded the available computing power, data, and program capability. Funding declined when systems could not handle the complexity of real environments.", "people": "Research agencies and universities", "impact": "Reduced investment and forced the field to reconsider unrealistic expectations."}, {"year": "1980\u20131986", "era": "Expert Systems", "icon": "\u2699", "title": "Expert Systems Enter Business", "description": "Rule-based systems such as XCON helped companies configure products and preserve specialist knowledge. Commercial success brought AI back into corporate planning.", "people": "Digital Equipment Corporation \u00b7 Carnegie Mellon", "impact": "Moved AI from laboratories into practical business operations."}, {"year": "1987\u20131993", "era": "AI Winter", "icon": "\u2744", "title": "The Second AI Winter", "description": "Expert systems were expensive to maintain, specialized hardware lost value, and many projects failed to meet expectations. Investment and public confidence fell again.", "people": "AI vendors \u00b7 corporate adopters", "impact": "Encouraged researchers to seek data-driven methods that could improve with experience."}, {"year": "1997", "era": "Machine Victory", "icon": "\u265e", "title": "Deep Blue Defeats Kasparov", "description": "IBM\u2019s Deep Blue defeated world chess champion Garry Kasparov in a six-game match. Massive parallel computing and carefully designed search demonstrated machine strength in a complex task.", "people": "IBM \u00b7 Garry Kasparov", "impact": "Made AI achievement visible to a worldwide audience."}, {"year": "2006", "era": "Deep Learning", "icon": "\u2b21", "title": "Deep Learning Returns", "description": "Geoffrey Hinton and collaborators showed improved methods for training multilayer neural networks. Larger datasets and faster processors made connectionist approaches practical again.", "people": "Geoffrey Hinton and collaborators", "impact": "Renewed interest in neural networks after years of limited progress."}, {"year": "2009", "era": "Data", "icon": "\u25a6", "title": "ImageNet Creates a Data Foundation", "description": "Fei-Fei Li and collaborators built ImageNet, a large labeled image database and benchmark. It gave computer-vision researchers a common way to train and compare models.", "people": "Fei-Fei Li \u00b7 Princeton \u00b7 Stanford", "impact": "Demonstrated how large, organized datasets could accelerate model improvement."}, {"year": "2011", "era": "Language", "icon": "?", "title": "Watson Wins Jeopardy!", "description": "IBM Watson defeated champion players on Jeopardy! by combining natural-language processing, information retrieval, ranking, and large-scale computing.", "people": "IBM Research", "impact": "Showed that machines could process clues, ambiguity, and broad knowledge under time pressure."}, {"year": "2012", "era": "Deep Learning", "icon": "\u25c9", "title": "AlexNet Changes Computer Vision", "description": "Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton used GPUs to train a deep convolutional network that won the ImageNet competition by a large margin.", "people": "Krizhevsky \u00b7 Sutskever \u00b7 Hinton \u00b7 NVIDIA GPUs", "impact": "Proved that deep networks, big data, and GPUs could outperform traditional vision methods."}, {"year": "2014", "era": "Generative AI", "icon": "\u221e", "title": "GANs Learn to Generate", "description": "Ian Goodfellow and colleagues introduced generative adversarial networks. A generator and discriminator trained against each other to produce increasingly realistic outputs.", "people": "Ian Goodfellow and collaborators", "impact": "Opened a major path for synthetic images and generative modeling."}, {"year": "2015", "era": "Cloud AI", "icon": "\u2601", "title": "Cloud Platforms Expand AI Access", "description": "Amazon Web Services, Microsoft Azure, and Google Cloud expanded access to scalable storage, GPUs, machine-learning tools, and hosted APIs.", "people": "AWS \u00b7 Microsoft \u00b7 Google", "impact": "Allowed students, startups, and enterprises to build AI without owning a supercomputer."}, {"year": "2016", "era": "Reinforcement Learning", "icon": "\u25cf", "title": "AlphaGo Defeats Lee Sedol", "description": "DeepMind\u2019s AlphaGo won four of five games against Go champion Lee Sedol. It combined deep neural networks, search, and reinforcement learning.", "people": "Google DeepMind \u00b7 Lee Sedol", "impact": "Demonstrated learning and planning in a problem once considered far beyond computers."}, {"year": "2017", "era": "Transformers", "icon": "\u21af", "title": "Attention Is All You Need", "description": "Google researchers introduced the Transformer architecture. Its attention mechanism enabled parallel training and became the foundation for modern large language models.", "people": "Vaswani and collaborators \u00b7 Google", "impact": "Changed natural-language processing and later influenced vision, audio, and multimodal AI."}, {"year": "2020", "era": "Large Language Models", "icon": "\u25a4", "title": "GPT-3 Demonstrates Scale", "description": "OpenAI released GPT-3, a 175-billion-parameter language model that could perform many tasks from instructions and examples without task-specific retraining.", "people": "OpenAI", "impact": "Popularized few-shot prompting and showed how model scale could produce broad language capability."}, {"year": "2022", "era": "Generative AI", "icon": "\u2727", "title": "ChatGPT Brings AI to the Public", "description": "OpenAI launched ChatGPT as a conversational interface. Generative AI rapidly entered education, software development, business, and creative work.", "people": "OpenAI \u00b7 Microsoft", "impact": "Turned large language models into a widely used everyday technology."}, {"year": "2023\u20132024", "era": "Multimodal AI", "icon": "\u25c8", "title": "Models Become Multimodal", "description": "Leading systems began working across text, images, audio, and video. OpenAI, Google, Anthropic, Meta, Microsoft, NVIDIA, and cloud providers competed to improve capability and deployment.", "people": "OpenAI \u00b7 Google \u00b7 Anthropic \u00b7 Meta \u00b7 Microsoft \u00b7 NVIDIA", "impact": "Expanded AI from prediction toward content creation, assistants, coding, science, and industry workflows."}],dialog=document.getElementById('dialog'),detail=document.getElementById('detail');
-document.querySelectorAll('.chip').forEach(btn=>btn.addEventListener('click',()=>{const m=data[+btn.dataset.index];detail.innerHTML=`<div class="year">${m.year} // ${m.era}</div><h2>${m.title}</h2><p>${m.description}</p><div class="readout"><b>CONTRIBUTORS:</b> ${m.people}<br><b>SYSTEM IMPACT:</b> ${m.impact}</div>`;dialog.showModal()}));
-dialog.querySelector('.close').onclick=()=>dialog.close();dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
-</script>
+<div class="ticker" aria-hidden="true"><div class="ticker-inner"><span>Scalable pipelines</span><span>Data quality</span><span>Analytics enablement</span><span>Responsible machine learning</span><span>Cloud infrastructure</span><span>Scalable pipelines</span><span>Data quality</span><span>Analytics enablement</span><span>Responsible machine learning</span><span>Cloud infrastructure</span></div></div>
+<section class="section" id="about"><div class="section-head"><h2>Professional value</h2><p>My work sits between engineering and decision support. I translate data requirements into dependable pipelines, improve reporting readiness, and approach machine learning as a disciplined process that begins with the problem, the people, and the quality of the data.</p></div><div class="value-grid">
+<article class="value reveal"><div class="num">01</div><h3>Engineering reliability</h3><p>I build and maintain ETL/ELT workflows, data models, and SQL transformations with attention to integrity, performance, and repeatability.</p></article>
+<article class="value reveal"><div class="num">02</div><h3>Analytics translation</h3><p>I collaborate with stakeholders to define KPIs, prepare trusted datasets, and turn technical processing into usable reporting and operational insight.</p></article>
+<article class="value reveal"><div class="num">03</div><h3>Responsible growth</h3><p>I am expanding from data engineering into machine learning through projects that emphasize valid evaluation, privacy, fairness, and human judgment.</p></article>
+</div></section>
+<section class="section" id="artifacts"><div class="section-head"><h2>Selected artifacts</h2><p>These artifacts are designed for instructors, hiring managers, data leaders, and technical peers. Each artifact includes its purpose, process, evidence, audience value, and reflection inside the artifact itself.</p></div><div class="artifacts">
+<article class="artifact reveal"><div class="artifact-body"><p class="eyebrow">Artifact 01 · Interactive research</p><h3>Signals &amp; Symbols: AI History Timeline</h3><p>An interactive circuit-board timeline that explains major moments in AI and machine learning through selectable milestone chips, concise historical context, contributor information, and impact statements.</p><div class="artifact-links"><a class="mini-link" href="timeline.html">Open portfolio artifact</a><a class="mini-link" href="https://tejaswin2299.github.io/portfolio/" target="_blank" rel="noopener">View live timeline ↗</a></div></div><div class="artifact-visual terminal-visual"><span>student@ai-history:~$ run timeline.exe</span><div class="chips"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></article>
+<article class="artifact reveal"><div class="artifact-body"><p class="eyebrow">Artifact 02 · AI design case</p><h3>ML PathFinder AI</h3><p>A beginner-friendly machine-learning planning coach that applies the PATH framework: Problem and people, Assess the data, Technique and testing, and Human and ethical review.</p><div class="artifact-links"><a class="mini-link" href="pathfinder.html">Open case study</a><a class="mini-link" href="https://chatgpt.com/g/g-6a55047ff4548191a00dfd700e342e0c-ml-pathfinder-ai" target="_blank" rel="noopener">Try the GPT ↗</a></div></div><div class="artifact-visual path-visual"><div class="pathline"><b>P</b><b>A</b><b>T</b><b>H</b></div></div></article>
+</div></section>
+<section class="section" id="experience"><div class="section-head"><h2>Experience &amp; education</h2><p>A focused record of data engineering, business intelligence, cloud infrastructure support, and academic preparation in information systems.</p></div><div class="experience">
+<div class="experience-row"><div class="date">Dec 2024–Present</div><div><h3>Data Engineer · VSPAstra, Providence Health client</h3><p>ETL/ELT pipelines, SQL transformation and optimization, Snowflake data warehousing, data models, analytics support, and data-quality controls.</p></div></div>
+<div class="experience-row"><div class="date">Jun 2023–Nov 2024</div><div><h3>Data Engineer · ITGlobal Services LLC, Huron Group client</h3><p>Qlik Sense dashboards, SQL/Alteryx/Python transformation, Tekton and Terraform support on GCP, automation, KPI development, and pipeline monitoring.</p></div></div>
+<div class="experience-row"><div class="date">2023</div><div><h3>M.S., Information Systems and Technology</h3><p>University of North Texas · Denton, Texas</p></div></div>
+<div class="experience-row"><div class="date">2020</div><div><h3>Bachelor's, Electrical and Electronics Engineering</h3><p>Gokaraju Rangaraju Institute of Engineering and Technology · Hyderabad, India</p></div></div>
+</div></section>
+<section class="section" id="skills"><div class="section-head"><h2>Working toolkit</h2><p>Technologies and practices represented by my professional experience and portfolio work.</p></div><div class="skills"><span class="skill">SQL</span><span class="skill">Snowflake</span><span class="skill">Python</span><span class="skill">ETL / ELT</span><span class="skill">Data Modeling</span><span class="skill">Qlik Sense</span><span class="skill">Alteryx</span><span class="skill">GCP</span><span class="skill">Tekton</span><span class="skill">Terraform</span><span class="skill">Data Quality</span><span class="skill">Machine Learning Planning</span></div></section>
+<section class="section" id="contact"><div class="contact-card"><div><p class="eyebrow">Connect</p><h2>Let’s make data more dependable and useful.</h2><p>For data engineering opportunities, analytics collaboration, or discussion of the portfolio artifacts, contact me by email.</p></div><a class="btn" href="mailto:tejaswi.rn@gmail.com">Email Sai Tejaswi →</a></div></section>
+</main>
+<footer><span>© 2026 Sai Tejaswi Nooka</span><span>Portfolio built with accessible HTML, CSS, and JavaScript.</span></footer>
+<script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));</script>
 </body></html>
