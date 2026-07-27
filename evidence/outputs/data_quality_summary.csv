@@ -1,0 +1,8 @@
+check,value
+rows,1000
+pixel_features,784
+classes,10
+missing_values,0
+duplicate_rows,0
+pixel_min,0
+pixel_max,255

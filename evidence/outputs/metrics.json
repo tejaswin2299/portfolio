@@ -1,0 +1,20 @@
+{
+  "dataset_rows": 1000,
+  "pixel_features": 784,
+  "classes": 10,
+  "missing_values": 0,
+  "duplicate_rows": 0,
+  "pixel_min": 0,
+  "pixel_max": 255,
+  "train_rows": 800,
+  "test_rows": 200,
+  "baseline_accuracy": 0.125,
+  "ann_accuracy": 0.815,
+  "ann_macro_f1": 0.8175,
+  "training_iterations": 35,
+  "hidden_layer": [
+    128
+  ],
+  "activation": "relu",
+  "random_state": 42
+}
