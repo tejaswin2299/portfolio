@@ -1,0 +1,41 @@
+{
+  "rows": 3810,
+  "features": 7,
+  "missing_values": 0,
+  "duplicate_rows": 0,
+  "class_counts": {
+    "Osmancik": 2180,
+    "Cammeo": 1630
+  },
+  "train_rows": 3048,
+  "test_rows": 762,
+  "accuracy": 0.916,
+  "macro_f1": 0.9138,
+  "classification_report": {
+    "Cammeo": {
+      "precision": 0.9171974522292994,
+      "recall": 0.8834355828220859,
+      "f1-score": 0.9,
+      "support": 326.0
+    },
+    "Osmancik": {
+      "precision": 0.9151785714285714,
+      "recall": 0.9403669724770642,
+      "f1-score": 0.9276018099547512,
+      "support": 436.0
+    },
+    "accuracy": 0.916010498687664,
+    "macro avg": {
+      "precision": 0.9161880118289354,
+      "recall": 0.9119012776495751,
+      "f1-score": 0.9138009049773756,
+      "support": 762.0
+    },
+    "weighted avg": {
+      "precision": 0.9160422920861007,
+      "recall": 0.916010498687664,
+      "f1-score": 0.9157931616014061,
+      "support": 762.0
+    }
+  }
+}
