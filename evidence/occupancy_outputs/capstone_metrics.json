@@ -1,0 +1,18 @@
+{
+  "rows": 10129,
+  "input_columns": 16,
+  "missing_values": 0,
+  "duplicate_rows": 0,
+  "class_counts": {
+    "0": 8228,
+    "1": 459,
+    "2": 748,
+    "3": 694
+  },
+  "train_rows": 8103,
+  "test_rows": 2026,
+  "best_model": "Random forest",
+  "test_accuracy": 0.9970384995064165,
+  "test_macro_f1": 0.9902839629611485,
+  "test_balanced_accuracy": 0.9892086330935252
+}
